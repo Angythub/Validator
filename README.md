@@ -1,6 +1,6 @@
 # Validator
 
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Angythub/Validator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Angythub/Validator/?branch=master)
 
 This lib can check php types as Int, String etc.
 
