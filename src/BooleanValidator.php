@@ -9,15 +9,9 @@ namespace Wreyno\Validator;
 class BooleanValidator {
 
     /**
-     *
-     */
-    public function __construct()
-    {
-
-    }
-
-    /**
      * @param bool $bool
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -42,6 +36,8 @@ class BooleanValidator {
 
     /**
      * @param bool $bool
+     *
+     * @return bool
      *
      * @throws \Exception
      */

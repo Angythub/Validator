@@ -8,34 +8,16 @@ namespace Wreyno\Validator;
  */
 class ArrayValidator {
 
-    /**
-     *
-     */
     const EQUAL = 0;
-    /**
-     *
-     */
     const HIGHER = 1;
-    /**
-     *
-     */
     const HIGHER_OR_EQUAL = 2;
-    /**
-     *
-     */
     const LOWER = 3;
     const LOWER_OR_EQUAL = 4;
 
     /**
-     *
-     */
-    public function __construct()
-    {
-
-    }
-
-    /**
      * @param array $array
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -62,6 +44,8 @@ class ArrayValidator {
      * @param array $array
      * @param int $sign
      * @param int $integer
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -125,6 +109,8 @@ class ArrayValidator {
                         return false;
                     }
                     break;
+                default:
+                    return false;
             }
         }
         else
@@ -137,6 +123,8 @@ class ArrayValidator {
      * @param array $array
      * @param int $min
      * @param int $max
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -162,6 +150,8 @@ class ArrayValidator {
     /**
      * @param array $array
      * @param string $key
+     *
+     * @return bool
      *
      * @throws \Exception
      */

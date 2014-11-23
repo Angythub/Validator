@@ -9,16 +9,10 @@ namespace Wreyno\Validator;
 class StringValidator {
 
     /**
-     *
-     */
-    public function __construct()
-    {
-
-    }
-
-    /**
      * @param string $string
      * @param int $length
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -45,6 +39,8 @@ class StringValidator {
      * @param string $string
      * @param int $length
      *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function higherLength($string, $length)
@@ -69,6 +65,8 @@ class StringValidator {
     /**
      * @param string $string
      * @param int $length
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -96,6 +94,8 @@ class StringValidator {
      * @param int $min
      * @param int $max
      *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function betweenLength($string, $min, $max)
@@ -120,6 +120,8 @@ class StringValidator {
     /**
      * @param string $string
      *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function startAndEndWhiteSpace($string)
@@ -143,6 +145,9 @@ class StringValidator {
 
     /**
      * @param string $string
+     *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function noWhiteSpace($string)

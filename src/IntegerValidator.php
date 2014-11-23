@@ -9,17 +9,10 @@ namespace Wreyno\Validator;
 class IntegerValidator {
 
     /**
-     *
-     */
-    public function __construct()
-    {
-
-    }
-
-
-    /**
      * @param int $a
      * @param int $b
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -47,6 +40,8 @@ class IntegerValidator {
      * @param int $highest
      * @param int $lowest
      *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function higher($highest, $lowest)
@@ -72,6 +67,8 @@ class IntegerValidator {
     /**
      * @param int $lowest
      * @param int $highest
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -99,6 +96,8 @@ class IntegerValidator {
      * @param int $min
      * @param int $max
      *
+     * @return bool
+     *
      * @throws \Exception
      */
     public static function between($integer, $min, $max)
@@ -123,6 +122,8 @@ class IntegerValidator {
     /**
      * @param int $integer
      * @param bool $zeroAccepted
+     *
+     * @return bool
      *
      * @throws \Exception
      */
@@ -158,6 +159,8 @@ class IntegerValidator {
     /**
      * @param int $integer
      * @param bool $zeroAccepted
+     *
+     * @return bool
      *
      * @throws \Exception
      */
