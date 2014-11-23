@@ -56,61 +56,24 @@ class ArrayValidator {
             switch($sign)
             {
                 case self::EQUAL:
-                    if (mb_strlen($array) == $integer)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return count($array) == $integer;
                     break;
 
                 case self::HIGHER:
-                    if (mb_strlen($array) > $integer)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return count($array) > $integer;
                     break;
 
                 case self::HIGHER_OR_EQUAL:
-                    if (mb_strlen($array) >= $integer)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return count($array) >= $integer;
                     break;
 
                 case self::LOWER:
-                    if (mb_strlen($array) < $integer)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return count($array) < $integer;
                     break;
 
                 case self::LOWER_OR_EQUAL:
-                    if (mb_strlen($array) <= $integer)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return count($array) <= $integer;
                     break;
-                default:
-                    return false;
             }
         }
         else
