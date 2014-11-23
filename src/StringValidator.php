@@ -16,6 +16,11 @@ class StringValidator {
 
     }
 
+    /**
+     * @param $string
+     * @param $length
+     * @throws \Exception
+     */
     public static function equalLength($string, $length)
     {
         if(is_string($string) && is_int($length))
@@ -31,11 +36,15 @@ class StringValidator {
         }
         else
         {
-            return '$string must be a string and $length an integer';
+            throw new \Exception('Not a string or not an integer');
         }
     }
 
-
+    /**
+     * @param $string
+     * @param $length
+     * @throws \Exception
+     */
     public static function higherLength($string, $length)
     {
         if(is_string($string) && is_int($length))
@@ -51,10 +60,15 @@ class StringValidator {
         }
         else
         {
-            return '$string must be a string and $length an integer';
+            throw new \Exception('Not a string or not an integer');
         }
     }
 
+    /**
+     * @param $string
+     * @param $length
+     * @throws \Exception
+     */
     public static function lowerLength($string, $length)
     {
         if(is_string($string) && is_int($length))
@@ -70,10 +84,16 @@ class StringValidator {
         }
         else
         {
-            return '$string must be a string and $length an integer';
+            throw new \Exception('Not a string or not an integer');
         }
     }
 
+    /**
+     * @param $string
+     * @param $min
+     * @param $max
+     * @throws \Exception
+     */
     public static function betweenLength($string, $min, $max)
     {
         if(is_string($string) && is_int($min) && is_int($max))
@@ -89,17 +109,53 @@ class StringValidator {
         }
         else
         {
-            return '$string must be a string and $length an integer';
+            throw new \Exception('Not a string or not an integer');
         }
     }
 
+    /**
+     * @param $string
+     * @throws \Exception
+     */
     public static function startAndEndWhiteSpace($string)
     {
-
+        if(is_string($string))
+        {
+            if ((substr($string, 0, 1) == " ") && (substr($string, mb_strlen($string)-1, 1) == " "))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            throw new \Exception('Not a string');
+        }
     }
 
+    /**
+     * @param $string
+     * @throws \Exception
+     */
     public static function noWhiteSpace($string)
     {
-
+        if(is_string($string))
+        {
+            if (strpos($string, ' ') === false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            throw new \Exception('Not a string');
+        }
     }
 } 

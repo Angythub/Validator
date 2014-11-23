@@ -12,7 +12,6 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
         $a = mt_rand(1, 10);
         $b = mt_rand(1, 10);
         $equal = IntegerValidator::equal($a, $b);
-        // test
 
         $this->assertTrue($equal);
     }

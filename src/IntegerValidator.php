@@ -16,10 +16,11 @@ class IntegerValidator {
 
     }
 
+
     /**
      * @param $a
      * @param $b
-     * @return bool|string
+     * @throws \Exception
      */
     public static function equal($a, $b)
     {
@@ -36,14 +37,15 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+            throw new \Exception('Not an integer');
         }
     }
+
 
     /**
      * @param $highest
      * @param $lowest
-     * @return bool|string
+     * @throws \Exception
      */
     public static function higher($highest, $lowest)
     {
@@ -60,14 +62,15 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+            throw new \Exception('Not an integer');
         }
     }
+
 
     /**
      * @param $lowest
      * @param $highest
-     * @return bool|string
+     * @throws \Exception
      */
     public static function lower($lowest, $highest)
     {
@@ -84,7 +87,7 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+             throw new \Exception('Not an integer');
         }
     }
 
@@ -92,13 +95,13 @@ class IntegerValidator {
      * @param $integer
      * @param $min
      * @param $max
-     * @return bool|string
+     * @throws \Exception
      */
     public static function between($integer, $min, $max)
     {
         if(is_int($integer) && is_int($min) && is_int($max))
         {
-            if (($integer > $min) && ($integer < $max))
+            if (($integer >= $min) && ($integer <= $max))
             {
                 return true;
             }
@@ -109,14 +112,14 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+            throw new \Exception('Not an integer');
         }
     }
 
     /**
      * @param $integer
      * @param bool $zeroAccepted
-     * @return bool|string
+     * @throws \Exception
      */
     public static function negative($integer, $zeroAccepted = true)
     {
@@ -128,13 +131,13 @@ class IntegerValidator {
                 {
                     return true;
                 }
-                elseif ($integer < 0)
-                {
-                    return true;
-                }
                 else {
                     return false;
                 }
+            }
+            elseif ($integer < 0)
+            {
+                return true;
             }
             else
             {
@@ -143,14 +146,14 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+            throw new \Exception('Not an integer');
         }
     }
 
     /**
      * @param $integer
      * @param bool $zeroAccepted
-     * @return bool|string
+     * @throws \Exception
      */
     public static function positive($integer, $zeroAccepted = true)
     {
@@ -177,7 +180,7 @@ class IntegerValidator {
         }
         else
         {
-            return "Variables must be integers";
+            throw new \Exception('Not an integer');
         }
     }
 } 
