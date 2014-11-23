@@ -54,7 +54,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
     public function testIntegerValidatorPositive()
     {
         $integer = mt_rand(1, 100);
-        $positive = IntegerValidator::negative($integer, true);
+        $positive = IntegerValidator::positive($integer, true);
 
         $this->assertEquals($positive, true);
     }
