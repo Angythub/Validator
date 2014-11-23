@@ -17,8 +17,9 @@ class StringValidator {
     }
 
     /**
-     * @param $string
-     * @param $length
+     * @param string $string
+     * @param int $length
+     *
      * @throws \Exception
      */
     public static function equalLength($string, $length)
@@ -41,8 +42,9 @@ class StringValidator {
     }
 
     /**
-     * @param $string
-     * @param $length
+     * @param string $string
+     * @param int $length
+     *
      * @throws \Exception
      */
     public static function higherLength($string, $length)
@@ -65,8 +67,9 @@ class StringValidator {
     }
 
     /**
-     * @param $string
-     * @param $length
+     * @param string $string
+     * @param int $length
+     *
      * @throws \Exception
      */
     public static function lowerLength($string, $length)
@@ -89,9 +92,10 @@ class StringValidator {
     }
 
     /**
-     * @param $string
-     * @param $min
-     * @param $max
+     * @param string $string
+     * @param int $min
+     * @param int $max
+     *
      * @throws \Exception
      */
     public static function betweenLength($string, $min, $max)
@@ -114,7 +118,8 @@ class StringValidator {
     }
 
     /**
-     * @param $string
+     * @param string $string
+     *
      * @throws \Exception
      */
     public static function startAndEndWhiteSpace($string)
@@ -137,7 +142,7 @@ class StringValidator {
     }
 
     /**
-     * @param $string
+     * @param string $string
      * @throws \Exception
      */
     public static function noWhiteSpace($string)

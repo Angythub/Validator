@@ -18,8 +18,9 @@ class IntegerValidator {
 
 
     /**
-     * @param $a
-     * @param $b
+     * @param int $a
+     * @param int $b
+     *
      * @throws \Exception
      */
     public static function equal($a, $b)
@@ -43,8 +44,9 @@ class IntegerValidator {
 
 
     /**
-     * @param $highest
-     * @param $lowest
+     * @param int $highest
+     * @param int $lowest
+     *
      * @throws \Exception
      */
     public static function higher($highest, $lowest)
@@ -68,8 +70,9 @@ class IntegerValidator {
 
 
     /**
-     * @param $lowest
-     * @param $highest
+     * @param int $lowest
+     * @param int $highest
+     *
      * @throws \Exception
      */
     public static function lower($lowest, $highest)
@@ -92,9 +95,10 @@ class IntegerValidator {
     }
 
     /**
-     * @param $integer
-     * @param $min
-     * @param $max
+     * @param int $integer
+     * @param int $min
+     * @param int $max
+     *
      * @throws \Exception
      */
     public static function between($integer, $min, $max)
@@ -117,8 +121,9 @@ class IntegerValidator {
     }
 
     /**
-     * @param $integer
+     * @param int $integer
      * @param bool $zeroAccepted
+     *
      * @throws \Exception
      */
     public static function negative($integer, $zeroAccepted = true)
@@ -151,8 +156,9 @@ class IntegerValidator {
     }
 
     /**
-     * @param $integer
+     * @param int $integer
      * @param bool $zeroAccepted
+     *
      * @throws \Exception
      */
     public static function positive($integer, $zeroAccepted = true)

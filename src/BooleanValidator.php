@@ -17,7 +17,8 @@ class BooleanValidator {
     }
 
     /**
-     * @param $bool
+     * @param bool $bool
+     *
      * @throws \Exception
      */
     public static function isTrue($bool)
@@ -40,7 +41,8 @@ class BooleanValidator {
     }
 
     /**
-     * @param $bool
+     * @param bool $bool
+     *
      * @throws \Exception
      */
     public static function isFalse($bool)
