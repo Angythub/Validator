@@ -173,4 +173,23 @@ class ArrayValidator {
             throw new \Exception('Not an array');
         }
     }
+
+    public static function valueExists($array, $value)
+    {
+        if(is_array($array))
+        {
+            if(in_array($value, $array))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            throw new \Exception('Not an array');
+        }
+    }
 } 

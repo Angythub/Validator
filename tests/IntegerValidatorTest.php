@@ -7,21 +7,21 @@ use Wreyno\Validator\IntegerValidator;
 class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 {
 
-    public function testIntegerValidatorEqualityTrue()
+    public function testIntegerValidatorEqual()
     {
-        $a = mt_rand(1, 10);
-        $b = mt_rand(1, 10);
-        $equal = IntegerValidator::equal($a, $b);
+        $number = mt_rand(0, 10);
+        $equal = IntegerValidator::equal($number, $number);
 
-        $this->assertTrue($equal);
+        $this->assertEquals($equal, true);
     }
 
-    public function testIntegerValidatorEqualityFalse()
+    public function testIntegerValidatorHigher()
     {
-        $a = mt_rand(1, 10);
-        $b = mt_rand(1, 10);
-        $equal = IntegerValidator::equal($a, $b);
+        $higher = mt_rand(50, 100);
+        $lowest = mt_rand(0, 49);
+        $higher = IntegerValidator::higher($higher,$lowest);
 
-        $this->assertFalse($equal);
+        $this->assertEquals($higher, true);
     }
+
 } 
