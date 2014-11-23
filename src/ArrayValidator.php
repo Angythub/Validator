@@ -57,23 +57,18 @@ class ArrayValidator {
             {
                 case self::EQUAL:
                     return count($array) == $integer;
-                    break;
 
                 case self::HIGHER:
                     return count($array) > $integer;
-                    break;
 
                 case self::HIGHER_OR_EQUAL:
                     return count($array) >= $integer;
-                    break;
 
                 case self::LOWER:
                     return count($array) < $integer;
-                    break;
 
                 case self::LOWER_OR_EQUAL:
                     return count($array) <= $integer;
-                    break;
             }
         }
         else
