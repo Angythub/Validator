@@ -17,7 +17,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testStringValidatorEqual()
     {
         $string = 'first string';
-        $result = StringValidator::equalLength($string, mb_strlen($string));
+        $result = StringValidator::equal($string, mb_strlen($string));
 
         $this->assertTrue($result);
     }
@@ -30,7 +30,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testStringValidatorHigher()
     {
         $string = 'first string';
-        $result = StringValidator::higherLength($string, mb_strlen($string)-1);
+        $result = StringValidator::higher($string, mb_strlen($string)-1);
 
         $this->assertTrue($result);
     }
@@ -43,7 +43,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testStringValidatorLower()
     {
         $string = 'first string';
-        $result = StringValidator::lowerLength($string, mb_strlen($string)+1);
+        $result = StringValidator::lower($string, mb_strlen($string)+1);
 
         $this->assertTrue($result);
     }
@@ -58,7 +58,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase {
         $string = 'first string';
         $min = mt_rand(0,5);
         $max = mt_rand(50, 100);
-        $result = StringValidator::betweenLength($string, $min, $max);
+        $result = StringValidator::between($string, $min, $max);
 
         $this->assertTrue($result);
     }

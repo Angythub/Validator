@@ -16,7 +16,7 @@ class StringValidator {
      *
      * @throws \Exception
      */
-    public static function equalLength($string, $length)
+    public static function equal($string, $length)
     {
         if(is_string($string) && is_int($length))
         {
@@ -43,7 +43,7 @@ class StringValidator {
      *
      * @throws \Exception
      */
-    public static function higherLength($string, $length)
+    public static function higher($string, $length)
     {
         if(is_string($string) && is_int($length))
         {
@@ -70,7 +70,7 @@ class StringValidator {
      *
      * @throws \Exception
      */
-    public static function lowerLength($string, $length)
+    public static function lower($string, $length)
     {
         if(is_string($string) && is_int($length))
         {
@@ -98,7 +98,7 @@ class StringValidator {
      *
      * @throws \Exception
      */
-    public static function betweenLength($string, $min, $max)
+    public static function between($string, $min, $max)
     {
         if(is_string($string) && is_int($min) && is_int($max))
         {
