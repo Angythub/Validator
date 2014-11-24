@@ -24,7 +24,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test if the number of element in array is higher or lower than the $integer parameter
+     * Test if the number of element in an array is higher or lower than the $integer parameter
      *
      * @throws \Exception
      */
@@ -34,7 +34,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $sign = 0;
         $integer = 1;
 
-        $result = ArrayValidator::compare($array,$sign, $integer);
+        $result = ArrayValidator::compare($array, $sign, $integer);
 
         $this->assertTrue($result);
     }
