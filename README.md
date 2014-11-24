@@ -4,7 +4,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/Angythub/Validator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/Angythub/Validator/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/Angythub/Validator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Angythub/Validator/build-status/master)
 
-This lib can check php types as Int, String etc.
+This lib can check multiple PHP types as Int, String, Boolean, Array or DateTime.
 
 ## Documentation
 
