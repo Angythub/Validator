@@ -18,7 +18,7 @@ class IntegerValidator {
      */
     public static function equal($a, $b)
     {
-        if(!is_int($a) && !is_int($b))
+        if(!is_int($a) || !is_int($b))
             throw new \Exception('Not an integer');
 
         if ($a == $b)
@@ -37,7 +37,7 @@ class IntegerValidator {
      */
     public static function higher($highest, $lowest)
     {
-        if(!is_int($highest) && !is_int($lowest))
+        if(!is_int($highest) || !is_int($lowest))
             throw new \Exception('Not an integer');
 
         if ($highest > $lowest)
@@ -57,7 +57,7 @@ class IntegerValidator {
      */
     public static function lower($lowest, $highest)
     {
-        if(!is_int($lowest) && !is_int($highest))
+        if(!is_int($lowest) || !is_int($highest))
             throw new \Exception('Not an integer');
 
         if ($lowest < $highest)
@@ -77,7 +77,7 @@ class IntegerValidator {
      */
     public static function between($integer, $min, $max)
     {
-        if(!is_int($integer) && !is_int($min) && !is_int($max))
+        if(!is_int($integer)  ||  !is_int($min)  ||  !is_int($max))
             throw new \Exception('Not an integer');
 
         if (($integer >= $min) && ($integer <= $max))
@@ -96,7 +96,7 @@ class IntegerValidator {
      */
     public static function negative($integer, $zeroAccepted = true)
     {
-        if(!is_int($integer) && !is_bool($zeroAccepted))
+        if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
         if ($zeroAccepted)
@@ -125,7 +125,7 @@ class IntegerValidator {
      */
     public static function positive($integer, $zeroAccepted = true)
     {
-        if(!is_int($integer) && !is_bool($zeroAccepted))
+        if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
         if ($zeroAccepted)

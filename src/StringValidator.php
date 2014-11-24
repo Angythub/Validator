@@ -18,7 +18,7 @@ class StringValidator {
      */
     public static function equal($string, $length)
     {
-        if(!is_string($string) && !is_int($length))
+        if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
         if (mb_strlen($string) == $length)
@@ -37,7 +37,7 @@ class StringValidator {
      */
     public static function higher($string, $length)
     {
-        if(!is_string($string) && !is_int($length))
+        if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
         if (mb_strlen($string) > $length)
@@ -56,7 +56,7 @@ class StringValidator {
      */
     public static function lower($string, $length)
     {
-        if(!is_string($string) && !is_int($length))
+        if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
         if (mb_strlen($string) < $length)
@@ -76,7 +76,7 @@ class StringValidator {
      */
     public static function between($string, $min, $max)
     {
-        if(!is_string($string) && !is_int($min) && !is_int($max))
+        if(!is_string($string) || !is_int($min) || !is_int($max))
             throw new \Exception('Not a string or not an integer');
 
         if ((mb_strlen($string) > $min) && (mb_strlen($string) < $max))
