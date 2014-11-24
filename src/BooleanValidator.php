@@ -6,8 +6,8 @@ namespace Wreyno\Validator;
  * Class BooleanValidator
  * @package Wreyno\Validator
  */
-class BooleanValidator {
-
+class BooleanValidator
+{
     /**
      * @param bool $bool
      *
