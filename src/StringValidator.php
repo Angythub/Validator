@@ -120,4 +120,4 @@ class StringValidator {
         else
             return false;
     }
-} 
+}

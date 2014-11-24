@@ -43,4 +43,4 @@ class BooleanValidator
         else
             return false;
     }
-} 
+}
