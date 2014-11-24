@@ -17,21 +17,13 @@ class BooleanValidator
      */
     public static function isTrue($bool)
     {
-        if(is_bool($bool))
-        {
-            if ($bool === true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
+        if(!is_bool($bool))
             throw new \Exception('Not a boolean');
-        }
+
+        if ($bool === true)
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -43,20 +35,12 @@ class BooleanValidator
      */
     public static function isFalse($bool)
     {
-        if(is_bool($bool))
-        {
-            if ($bool === false)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
+        if(!is_bool($bool))
             throw new \Exception('Not a boolean');
-        }
+
+        if ($bool === false)
+            return true;
+        else
+            return false;
     }
 } 

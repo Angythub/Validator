@@ -20,13 +20,9 @@ class DateTimeValidator {
         $dateNow->sub(new \DateInterval('P18Y'));
 
         if ($date < $dateNow)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     /**
@@ -38,13 +34,9 @@ class DateTimeValidator {
     public static function isDay(\DateTime $date, $day)
     {
         if ($date->format('d') == $day)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     /**
@@ -57,13 +49,9 @@ class DateTimeValidator {
     {
 
         if ($date->format('m') == $month)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     /**
@@ -75,13 +63,9 @@ class DateTimeValidator {
     public static function isYear(\DateTime $date, $year)
     {
         if ($date->format('Y') == $year)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     /**
@@ -94,12 +78,8 @@ class DateTimeValidator {
         $dateNow = new \DateTime();
 
         if ($date->format('Y-m-d') == $dateNow->format('Y-m-d'))
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 }
