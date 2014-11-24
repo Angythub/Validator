@@ -23,6 +23,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if an array not empty
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorIsEmptyFalse()
     {
         $array = ['Test'];
@@ -32,7 +37,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test if the number of element in an array is higher or lower than the $integer parameter
+     * Test if the number of element in an array is equal to the $integer parameter
      *
      * @throws \Exception
      */
@@ -47,6 +52,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the number of element in an array is higher than the $integer parameter
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorCompareHigher()
     {
         $array = ['first', 'second'];
@@ -58,6 +68,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the number of element in an array is higher or equal to the $integer parameter
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorCompareHigherEqual()
     {
         $array = ['first'];
@@ -69,6 +84,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the number of element in an array is lower than the $integer parameter
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorCompareLower()
     {
         $array = ['first'];
@@ -80,6 +100,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the number of element in an array is lower or equal to the $integer parameter
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorCompareLowerEqual()
     {
         $array = ['first'];
@@ -92,7 +117,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test if number of element is located between a number and an other
+     * Test if number of element is located inside a range of number
      *
      * @throws \Exception
      */
@@ -107,6 +132,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if number of element isn't located inside a range of number
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorNumberElementsBetweenFalse()
     {
         $array = ['first', 'second', 'third'];
@@ -133,6 +163,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the key parameter does not exist within the array
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorKeyExistsFalse()
     {
         $array = ['first' => '1', 'second' => '2', 'third' => '3'];
@@ -158,6 +193,11 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue($result);
     }
 
+    /**
+     * Test if the value parameter does not exist within the array
+     *
+     * @throws \Exception
+     */
     public function testArrayValidatorValueExistsFalse()
     {
         $array = ["first" => "1", "second" => "2", "third" => "3"];
