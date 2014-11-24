@@ -2,7 +2,6 @@
 
 namespace Wreyno\Validator;
 
-
 /**
  * Class DateTimeValidator
  * @package Wreyno\Validator
