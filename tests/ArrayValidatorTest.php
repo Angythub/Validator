@@ -117,6 +117,22 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
+     * Test Default situation with compare function
+     *
+     * @throws \Exception
+     */
+    public function testArrayValidatorCompareDefault()
+    {
+        $array = ['first'];
+        $sign = 8;
+        $integer = 1;
+
+        $result = ArrayValidator::compare($array, $sign, $integer);
+
+        $this->assertFalse($result);
+    }
+
+    /**
      * Test if number of element is located inside a range of number
      *
      * @throws \Exception

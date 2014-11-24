@@ -62,6 +62,8 @@ class ArrayValidator {
 
             case self::LOWER_OR_EQUAL:
                 return count($array) <= $integer;
+            default:
+                return false;
         }
     }
 
@@ -95,7 +97,7 @@ class ArrayValidator {
      */
     public static function keyExists($array, $key)
     {
-        if(is_array($array))
+        if(!is_array($array))
             throw new \Exception('Not an array');
 
         if(array_key_exists($key, $array))

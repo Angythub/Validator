@@ -106,13 +106,12 @@ class IntegerValidator {
             else
                 return false;
         }
-        elseif ($integer < 0)
+        elseif ($zeroAccepted == false)
         {
-            return true;
-        }
-        else
-        {
-            return false;
+            if ($integer < 0)
+                return true;
+            else
+                return false;
         }
     }
 
@@ -130,19 +129,18 @@ class IntegerValidator {
             throw new \Exception('Not an integer');
 
         if ($zeroAccepted)
+        {
             if ($integer >= 0)
-            {
                 return true;
-            }
-            elseif ($integer > 0)
-            {
-                return true;
-            }
             else
-            {
                 return false;
-            }
-        else
-            return false;
+        }
+        elseif ($zeroAccepted == false)
+        {
+            if ($integer > 0)
+                return true;
+            else
+                return false;
+        }
     }
 } 

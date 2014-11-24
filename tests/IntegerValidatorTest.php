@@ -124,53 +124,106 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test if the integer in parameter is negative
+     * Test if the integer in parameter is negative and includes zero
      *
      * @throws \Exception
      */
-    public function testIntegerValidatorNegative()
+    public function testIntegerValidatorNegativeZero()
     {
-        $integer = mt_rand(-100, -1);
+        $integer = 0;
         $result = IntegerValidator::negative($integer, true);
 
         $this->assertTrue($result);
     }
 
     /**
-     * Test if the integer in parameter is not negative
+     * Test if the integer in parameter is negative without including zero
      *
      * @throws \Exception
      */
-    public function testIntegerValidatorNegativeFalse()
+    public function testIntegerValidatorNegativeNoZero()
     {
-        $integer = mt_rand(1, 100);
+        $integer = -1;
+        $result = IntegerValidator::negative($integer, false);
+
+        $this->assertTrue($result);
+    }
+
+    /**
+     * Test if the integer in parameter is not negative including zero
+     *
+     * @throws \Exception
+     */
+    public function testIntegerValidatorNegativeZeroFalse()
+    {
+        $integer = 1;
         $result = IntegerValidator::negative($integer, true);
 
         $this->assertFalse($result);
     }
 
     /**
-     * Test if the integer in parameter is positive
+     * Test if the integer in parameter is not negative without including zero
+     *
+     * @throws \Exception
+     */
+    public function testIntegerValidatorNegativeNoZeroFalse()
+    {
+        $integer = 1;
+        $result = IntegerValidator::negative($integer, false);
+
+        $this->assertFalse($result);
+    }
+
+
+    /**
+     * Test if the integer in parameter is positive including zero
      *
      * @throws \Exception
      */
     public function testIntegerValidatorPositive()
     {
-        $integer = mt_rand(1, 100);
+        $integer = 0;
         $result = IntegerValidator::positive($integer, true);
 
         $this->assertTrue($result);
     }
 
     /**
-     * Test if the integer in parameter is not positive
+     * Test if the integer in parameter is positive without including zero
      *
      * @throws \Exception
      */
-    public function testIntegerValidatorPositiveFalse()
+    public function testIntegerValidatorPositiveNoZero()
     {
-        $integer = mt_rand(-100, -1);
+        $integer = 1;
+        $result = IntegerValidator::positive($integer, false);
+
+        $this->assertTrue($result);
+    }
+
+    /**
+     * Test if the integer in parameter is not positive including zero
+     *
+     * @throws \Exception
+     */
+    public function testIntegerValidatorPositiveZeroFalse()
+    {
+        $integer = -1;
         $result = IntegerValidator::positive($integer, true);
+
+        $this->assertFalse($result);
+    }
+
+    /**
+     * Test if the integer in parameter is not positive without including zero
+     *
+     * @throws \Exception
+     */
+    public function testIntegerValidatorPositiveNoZeroFalse()
+    {
+        $integer = -1;
+        $result = IntegerValidator::positive($integer, false);
 
         $this->assertFalse($result);
     }
