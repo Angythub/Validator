@@ -44,7 +44,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayValidatorCompareEqual()
     {
         $array = ['first'];
-        $sign = 0;
+        $sign = ArrayValidator::EQUAL;
         $integer = 1;
 
         $result = ArrayValidator::compare($array, $sign, $integer);
@@ -60,7 +60,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayValidatorCompareHigher()
     {
         $array = ['first', 'second'];
-        $sign = 1;
+        $sign = ArrayValidator::HIGHER;
         $integer = 1;
 
         $result = ArrayValidator::compare($array, $sign, $integer);
@@ -76,7 +76,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayValidatorCompareHigherEqual()
     {
         $array = ['first'];
-        $sign = 2;
+        $sign = ArrayValidator::HIGHER_OR_EQUAL;
         $integer = 1;
 
         $result = ArrayValidator::compare($array, $sign, $integer);
@@ -92,7 +92,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayValidatorCompareLower()
     {
         $array = ['first'];
-        $sign = 3;
+        $sign = ArrayValidator::LOWER;
         $integer = 2;
 
         $result = ArrayValidator::compare($array, $sign, $integer);
@@ -108,7 +108,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase {
     public function testArrayValidatorCompareLowerEqual()
     {
         $array = ['first'];
-        $sign = 4;
+        $sign = ArrayValidator::LOWER_OR_EQUAL;
         $integer = 1;
 
         $result = ArrayValidator::compare($array, $sign, $integer);
