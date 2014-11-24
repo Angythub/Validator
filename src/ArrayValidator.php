@@ -90,7 +90,7 @@ class ArrayValidator {
     {
         if(is_array($array) && is_int($min) && is_int($max))
         {
-            if ((mb_strlen($array) >= $min) && (mb_strlen($array) <= $max))
+            if ((count($array) >= $min) && (count($array) <= $max))
             {
                 return true;
             }
@@ -132,22 +132,19 @@ class ArrayValidator {
         }
     }
 
-    public static function valueExists($array, $value)
+    public static function valueExists($array, $valueString)
     {
-        if(is_array($array))
+        if(!is_array($array))
         {
-            if(in_array($value, $array))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            throw new \Exception('Not an array');
+        }
+        if(in_array($valueString, $array))
+        {
+            return true;
         }
         else
         {
-            throw new \Exception('Not an array');
+            return false;
         }
     }
 } 

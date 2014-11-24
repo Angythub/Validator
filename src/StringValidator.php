@@ -128,7 +128,7 @@ class StringValidator {
     {
         if(is_string($string))
         {
-            if ((substr($string, 0, 1) == " ") && (substr($string, mb_strlen($string)-1, 1) == " "))
+            if ((substr($string, 0, 1) == " ") || (substr($string, mb_strlen($string)-1, 1) == " "))
             {
                 return true;
             }
