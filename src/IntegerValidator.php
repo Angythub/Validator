@@ -99,14 +99,14 @@ class IntegerValidator {
         if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
-        if ($zeroAccepted)
+        if ($zeroAccepted === true)
         {
             if ($integer <= 0)
                 return true;
             else
                 return false;
         }
-        elseif ($zeroAccepted == false)
+        else
         {
             if ($integer < 0)
                 return true;
@@ -128,14 +128,14 @@ class IntegerValidator {
         if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
-        if ($zeroAccepted)
+        if ($zeroAccepted === true)
         {
             if ($integer >= 0)
                 return true;
             else
                 return false;
         }
-        elseif ($zeroAccepted == false)
+        else
         {
             if ($integer > 0)
                 return true;
