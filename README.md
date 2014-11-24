@@ -8,13 +8,21 @@ This lib can check php types as Int, String etc.
 
 ## Documentation
 
-### Int
+### IntegerValidator
 
- 
+The IntegerValidator class can check multiple types of Integer :
+* equal : Check if two integers are equal.
+* higher : Check if an integer is higher than an other.
+* lower : Check if an integer is lower than an other.
+* between : Check if an integer is between a range.
+* negative : Check if an integer is negative.
+* positive : Check if an integer is positive.
+
+#### Example 
 ```php
 require __DIR__.'/vendor/autoload.php';
 
-echo \OKLM\StringGenerator\PasswordGenerator::generate(10, \OKLM\StringGenerator\PasswordGenerator::PASSWORD_EASY, '');
+$validator =  \Wreyno\Validator\IntegerValidator::equal($integer, 2); // True or False
 ```
 
 
