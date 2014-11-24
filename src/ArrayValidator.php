@@ -101,13 +101,9 @@ class ArrayValidator {
             throw new \Exception('Not an array');
 
         if(array_key_exists($key, $array))
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     public static function valueExists($array, $valueString)
@@ -116,12 +112,8 @@ class ArrayValidator {
             throw new \Exception('Not an array');
 
         if(in_array($valueString, $array))
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 }
