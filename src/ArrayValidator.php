@@ -8,6 +8,7 @@ namespace Wreyno\Validator;
  */
 class ArrayValidator
 {
+
     const EQUAL = 0;
     const HIGHER = 1;
     const HIGHER_OR_EQUAL = 2;
@@ -58,7 +59,6 @@ class ArrayValidator
 
             case self::LOWER_OR_EQUAL:
                 return count($array) <= $integer;
-
             default:
                 return false;
         }
