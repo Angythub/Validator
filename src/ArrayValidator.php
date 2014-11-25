@@ -27,11 +27,7 @@ class ArrayValidator
         if(!is_array($array))
             throw new \Exception('Not an array');
 
-        if(empty($array))
-
-            return true;
-        else
-            return false;
+        return (empty($array)) ? true : false;
     }
 
     /**
@@ -82,10 +78,7 @@ class ArrayValidator
         if(!is_array($array) || !is_int($min) || !is_int($max))
             throw new \Exception('Not an array or an integer');
 
-        if ((count($array) >= $min) && (count($array) <= $max))
-            return true;
-        else
-            return false;
+        return ((count($array) >= $min) && (count($array) <= $max)) ? true : false;
     }
 
     /**
@@ -101,11 +94,7 @@ class ArrayValidator
         if(!is_array($array))
             throw new \Exception('Not an array');
 
-        if(array_key_exists($key, $array))
-
-            return true;
-        else
-            return false;
+        return (array_key_exists($key, $array)) ? true : false;
     }
 
     /**
@@ -121,10 +110,6 @@ class ArrayValidator
         if(!is_array($array))
             throw new \Exception('Not an array');
 
-        if(in_array($valueString, $array))
-
-            return true;
-        else
-            return false;
+        return (in_array($valueString, $array)) ? true : false;
     }
 }

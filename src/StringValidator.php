@@ -22,10 +22,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
-        if (mb_strlen($string) == $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) == $length) ? true : false;
     }
 
     /**
@@ -41,10 +38,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
-        if (mb_strlen($string) > $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) > $length) ? true : false;
     }
 
     /**
@@ -60,10 +54,7 @@ class StringValidator
         if(!is_string($string) || !is_int($length))
             throw new \Exception('Not a string or not an integer');
 
-        if (mb_strlen($string) < $length)
-            return true;
-        else
-            return false;
+        return (mb_strlen($string) < $length) ? true : false;
     }
 
     /**
@@ -80,10 +71,7 @@ class StringValidator
         if(!is_string($string) || !is_int($min) || !is_int($max))
             throw new \Exception('Not a string or not an integer');
 
-        if ((mb_strlen($string) > $min) && (mb_strlen($string) < $max))
-            return true;
-        else
-            return false;
+        return ((mb_strlen($string) > $min) && (mb_strlen($string) < $max)) ? true : false;
     }
 
     /**
@@ -98,10 +86,7 @@ class StringValidator
         if(!is_string($string))
             throw new \Exception('Not a string');
 
-        if ((substr($string, 0, 1) == " ") || (substr($string, mb_strlen($string)-1, 1) == " "))
-            return true;
-        else
-            return false;
+        return ((substr($string, 0, 1) == " ") || (substr($string, mb_strlen($string)-1, 1) == " ")) ? true : false;
     }
 
     /**
@@ -116,9 +101,6 @@ class StringValidator
         if(!is_string($string))
             throw new \Exception('Not a string');
 
-        if (strpos($string, ' ') === false)
-            return true;
-        else
-            return false;
+        return (strpos($string, ' ') === false) ? true : false;
     }
 }

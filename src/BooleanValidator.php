@@ -20,10 +20,7 @@ class BooleanValidator
         if(!is_bool($bool))
             throw new \Exception('Not a boolean');
 
-        if ($bool === true)
-            return true;
-        else
-            return false;
+        return ($bool === true) ? true : false;
     }
 
     /**
@@ -38,9 +35,6 @@ class BooleanValidator
         if(!is_bool($bool))
             throw new \Exception('Not a boolean');
 
-        if ($bool === false)
-            return true;
-        else
-            return false;
+        return ($bool === false) ? true : false;
     }
 }

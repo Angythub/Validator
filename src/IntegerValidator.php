@@ -22,10 +22,7 @@ class IntegerValidator
         if(!is_int($a) || !is_int($b))
             throw new \Exception('Not an integer');
 
-        if ($a == $b)
-            return true;
-        else
-            return false;
+        return ($a == $b) ? true : false;
     }
 
     /**
@@ -41,10 +38,7 @@ class IntegerValidator
         if(!is_int($highest) || !is_int($lowest))
             throw new \Exception('Not an integer');
 
-        if ($highest > $lowest)
-            return true;
-        else
-            return false;
+        return ($highest > $lowest) ? true : false;
     }
 
     /**
@@ -60,10 +54,7 @@ class IntegerValidator
         if(!is_int($lowest) || !is_int($highest))
             throw new \Exception('Not an integer');
 
-        if ($lowest < $highest)
-            return true;
-        else
-            return false;
+        return ($lowest < $highest) ? true : false;
     }
 
     /**
@@ -80,10 +71,7 @@ class IntegerValidator
         if(!is_int($integer)  ||  !is_int($min)  ||  !is_int($max))
             throw new \Exception('Not an integer');
 
-        if (($integer >= $min) && ($integer <= $max))
-            return true;
-        else
-            return false;
+        return (($integer >= $min) && ($integer <= $max)) ? true : false;
     }
 
     /**
@@ -100,15 +88,9 @@ class IntegerValidator
             throw new \Exception('Not an integer');
 
         if ($zeroAccepted === true) {
-            if ($integer <= 0)
-                return true;
-            else
-                return false;
+            return ($integer <= 0) ? true : false;
         } else {
-            if ($integer < 0)
-                return true;
-            else
-                return false;
+            return ($integer < 0) ? true : false;
         }
     }
 
@@ -126,15 +108,9 @@ class IntegerValidator
             throw new \Exception('Not an integer');
 
         if ($zeroAccepted === true) {
-            if ($integer >= 0)
-                return true;
-            else
-                return false;
+            return ($integer >= 0) ? true : false;
         } else {
-            if ($integer > 0)
-                return true;
-            else
-                return false;
+            return ($integer > 0) ? true : false;
         }
     }
 }
