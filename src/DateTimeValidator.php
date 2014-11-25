@@ -6,7 +6,8 @@ namespace Wreyno\Validator;
  * Class DateTimeValidator
  * @package Wreyno\Validator
  */
-class DateTimeValidator {
+class DateTimeValidator
+{
 
     /**
      * @param \DateTime $date
@@ -26,7 +27,7 @@ class DateTimeValidator {
 
     /**
      * @param \DateTime $date
-     * @param int $day
+     * @param int       $day
      *
      * @return bool
      */
@@ -40,7 +41,7 @@ class DateTimeValidator {
 
     /**
      * @param \DateTime $date
-     * @param int $month
+     * @param int       $month
      *
      * @return bool
      */
@@ -55,7 +56,7 @@ class DateTimeValidator {
 
     /**
      * @param \DateTime $date
-     * @param int $year
+     * @param int       $year
      *
      * @return bool
      */

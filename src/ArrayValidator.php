@@ -6,7 +6,8 @@ namespace Wreyno\Validator;
  * Class ArrayValidator
  * @package Wreyno\Validator
  */
-class ArrayValidator {
+class ArrayValidator
+{
 
     const EQUAL = 0;
     const HIGHER = 1;
@@ -34,8 +35,8 @@ class ArrayValidator {
 
     /**
      * @param array $array
-     * @param int $sign
-     * @param int $integer
+     * @param int   $sign
+     * @param int   $integer
      *
      * @return bool
      *
@@ -46,8 +47,7 @@ class ArrayValidator {
         if (!is_array($array) || !is_int($sign) || !is_int($integer))
             throw new \Exception('Not an array or an integer');
 
-        switch($sign)
-        {
+        switch($sign) {
             case self::EQUAL:
                 return count($array) == $integer;
 
@@ -69,8 +69,8 @@ class ArrayValidator {
 
     /**
      * @param array $array
-     * @param int $min
-     * @param int $max
+     * @param int   $min
+     * @param int   $max
      *
      * @return bool
      *
@@ -88,7 +88,7 @@ class ArrayValidator {
     }
 
     /**
-     * @param array $array
+     * @param array  $array
      * @param string $key
      *
      * @return bool

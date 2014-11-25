@@ -6,7 +6,8 @@ namespace Wreyno\Validator;
  * Class IntegerValidator
  * @package Wreyno\Validator
  */
-class IntegerValidator {
+class IntegerValidator
+{
 
     /**
      * @param int $a
@@ -45,7 +46,6 @@ class IntegerValidator {
         else
             return false;
     }
-
 
     /**
      * @param int $lowest
@@ -87,7 +87,7 @@ class IntegerValidator {
     }
 
     /**
-     * @param int $integer
+     * @param int  $integer
      * @param bool $zeroAccepted
      *
      * @return bool
@@ -99,15 +99,12 @@ class IntegerValidator {
         if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
-        if ($zeroAccepted === true)
-        {
+        if ($zeroAccepted === true) {
             if ($integer <= 0)
                 return true;
             else
                 return false;
-        }
-        else
-        {
+        } else {
             if ($integer < 0)
                 return true;
             else
@@ -116,7 +113,7 @@ class IntegerValidator {
     }
 
     /**
-     * @param int $integer
+     * @param int  $integer
      * @param bool $zeroAccepted
      *
      * @return bool
@@ -128,15 +125,12 @@ class IntegerValidator {
         if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
-        if ($zeroAccepted === true)
-        {
+        if ($zeroAccepted === true) {
             if ($integer >= 0)
                 return true;
             else
                 return false;
-        }
-        else
-        {
+        } else {
             if ($integer > 0)
                 return true;
             else

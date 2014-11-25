@@ -6,11 +6,12 @@ namespace Wreyno\Validator;
  * Class StringValidator
  * @package Wreyno\Validator
  */
-class StringValidator {
+class StringValidator
+{
 
     /**
      * @param string $string
-     * @param int $length
+     * @param int    $length
      *
      * @return bool
      *
@@ -29,7 +30,7 @@ class StringValidator {
 
     /**
      * @param string $string
-     * @param int $length
+     * @param int    $length
      *
      * @return bool
      *
@@ -48,7 +49,7 @@ class StringValidator {
 
     /**
      * @param string $string
-     * @param int $length
+     * @param int    $length
      *
      * @return bool
      *
@@ -67,8 +68,8 @@ class StringValidator {
 
     /**
      * @param string $string
-     * @param int $min
-     * @param int $max
+     * @param int    $min
+     * @param int    $max
      *
      * @return bool
      *
