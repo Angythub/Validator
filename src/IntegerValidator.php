@@ -103,10 +103,6 @@ class IntegerValidator
         if(!is_int($integer) || !is_bool($zeroAccepted))
             throw new \Exception('Not an integer');
 
-        if ($zeroAccepted === true) {
-            return ($integer >= 0) ? true : false;
-        } else {
-            return ($integer > 0) ? true : false;
-        }
+        return ($zeroAccepted === true) ? ($integer >= 0) ? true : false : ($integer > 0) ? true : false;
     }
 }
