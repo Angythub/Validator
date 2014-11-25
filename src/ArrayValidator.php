@@ -28,6 +28,7 @@ class ArrayValidator
             throw new \Exception('Not an array');
 
         if(empty($array))
+
             return true;
         else
             return false;
@@ -47,7 +48,7 @@ class ArrayValidator
         if (!is_array($array) || !is_int($sign) || !is_int($integer))
             throw new \Exception('Not an array or an integer');
 
-        switch($sign) {
+        switch ($sign) {
             case self::EQUAL:
                 return count($array) == $integer;
 
@@ -101,6 +102,7 @@ class ArrayValidator
             throw new \Exception('Not an array');
 
         if(array_key_exists($key, $array))
+
             return true;
         else
             return false;
@@ -112,6 +114,7 @@ class ArrayValidator
             throw new \Exception('Not an array');
 
         if(in_array($valueString, $array))
+
             return true;
         else
             return false;
