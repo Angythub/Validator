@@ -108,6 +108,14 @@ class ArrayValidator
             return false;
     }
 
+    /**
+     * @param $array
+     * @param $valueString
+     *
+     * @return bool
+     *
+     * @throws \Exception
+     */
     public static function valueExists($array, $valueString)
     {
         if(!is_array($array))
