@@ -41,7 +41,6 @@ class DateTimeValidator
      */
     public static function isMonth(\DateTime $date, $month)
     {
-
         return ($date->format('m') == $month) ? true : false;
     }
 
